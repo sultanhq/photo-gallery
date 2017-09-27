@@ -27,9 +27,9 @@ class App extends Component {
         </div>
         <div className="Gallery">
           <ImageTitle text={this.state.img.title} />
-          <NavButton Direction="Previous" />
+          <NavButton direction="Previous" />
             <ImageView url={this.state.img.url} />
-          <NavButton Direction="Next" />
+          <NavButton direction="Next" />
           <ImageCaption text={this.state.img.caption} />
           <ImageGallery />
 
