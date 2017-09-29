@@ -6,12 +6,14 @@ import { NavButton } from "./assets/NavButton";
 import { ImageView } from "./assets/ImageView";
 import { ImageCaption } from "./assets/ImageCaption";
 import { ImageGallery } from "./assets/ImageGallery";
+import { getData } from "./assets/ImageSource";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       img: {
+        id: 0,
         title: "",
         url: {
           thumb: "",
@@ -28,8 +30,32 @@ class App extends Component {
     });
   };
 
-  navigate = d =>{ // TO ADD
-  }
+  navigate = direction => {
+    switch (direction) {
+      case "Previous": {
+        const images = getData();
+        let nextId = this.state.img.id - 2;
+        nextId < 0 ? (nextId = images.length - 1) : nextId;
+        let nextImage = images[nextId];
+        this.setState({
+          img: nextImage
+        });
+        break;
+      }
+      case "Next": {
+        const images = getData();
+        let nextId = this.state.img.id;
+        nextId >= images.length ? (nextId = 0) : nextId;
+        let nextImage = images[nextId];
+        this.setState({
+          img: nextImage
+        });
+        break;
+      }
+      default:
+        break;
+    }
+  };
 
   render() {
     return (
@@ -41,9 +67,9 @@ class App extends Component {
         <div className="Gallery">
           <ImageTitle text={this.state.img.title} />
           <div className="viewContainer">
-            <NavButton direction="Previous" />
+            <NavButton direction="Previous" navigate={this.navigate} />
             <ImageView url={this.state.img.url.full} />
-            <NavButton direction="Next" />
+            <NavButton direction="Next" navigate={this.navigate} />
           </div>
           <ImageCaption text={this.state.img.caption} />
           <ImageGallery updateView={this.updateView} />
