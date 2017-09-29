@@ -3,8 +3,8 @@ const getData = () => {
     {
       id: 1,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/1/",
-        full: "http://lorempixel.com/800/400/cats/1/"
+        thumb: "http://lorempixel.com/80/60/cats/1/",
+        full: "http://lorempixel.com/800/600/cats/1/"
       },
       title: "CATZ R Gr8",
       caption: "Mewment"
@@ -12,8 +12,8 @@ const getData = () => {
     {
       id: 2,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/2/",
-        full: "http://lorempixel.com/800/400/cats/2/"
+        thumb: "http://lorempixel.com/80/60/cats/2/",
+        full: "http://lorempixel.com/800/600/cats/2/"
       },
       title: "CATZ R Gr8",
       caption: "Cat-titude"
@@ -21,8 +21,8 @@ const getData = () => {
     {
       id: 3,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/3/",
-        full: "http://lorempixel.com/800/400/cats/3/"
+        thumb: "http://lorempixel.com/80/60/cats/3/",
+        full: "http://lorempixel.com/800/600/cats/3/"
       },
       title: "CATZ R Gr8",
       caption: "Meow-sician"
@@ -30,8 +30,8 @@ const getData = () => {
     {
       id: 4,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/4/",
-        full: "http://lorempixel.com/800/400/cats/4/"
+        thumb: "http://lorempixel.com/80/60/cats/4/",
+        full: "http://lorempixel.com/800/600/cats/4/"
       },
       title: "CATZ R Gr8",
       caption: "Claw-some"
@@ -39,8 +39,8 @@ const getData = () => {
     {
       id: 5,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/5/",
-        full: "http://lorempixel.com/800/400/cats/5/"
+        thumb: "http://lorempixel.com/80/60/cats/5/",
+        full: "http://lorempixel.com/800/600/cats/5/"
       },
       title: "CATZ R Gr8",
       caption: "Paw-lease"
@@ -48,8 +48,8 @@ const getData = () => {
     {
       id: 6,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/6/",
-        full: "http://lorempixel.com/800/400/cats/6/"
+        thumb: "http://lorempixel.com/80/60/cats/6/",
+        full: "http://lorempixel.com/800/600/cats/6/"
       },
       title: "CATZ R Gr8",
       caption: "Meow-nificent"
@@ -57,8 +57,8 @@ const getData = () => {
     {
       id: 7,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/7/",
-        full: "http://lorempixel.com/800/400/cats/7/"
+        thumb: "http://lorempixel.com/80/60/cats/7/",
+        full: "http://lorempixel.com/800/600/cats/7/"
       },
       title: "CATZ R Gr8",
       caption: "Cathletic"
@@ -66,8 +66,8 @@ const getData = () => {
     {
       id: 8,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/8/",
-        full: "http://lorempixel.com/800/400/cats/8/"
+        thumb: "http://lorempixel.com/80/60/cats/8/",
+        full: "http://lorempixel.com/800/600/cats/8/"
       },
       title: "CATZ R Gr8",
       caption: "Purr-suasion"
@@ -75,8 +75,8 @@ const getData = () => {
     {
       id: 9,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/9/",
-        full: "http://lorempixel.com/800/400/cats/9/"
+        thumb: "http://lorempixel.com/80/60/cats/9/",
+        full: "http://lorempixel.com/800/600/cats/9/"
       },
       title: "CATZ R Gr8",
       caption: "Paw-sitive"
@@ -84,8 +84,8 @@ const getData = () => {
     {
       id: 10,
       url: {
-        thumb: "http://lorempixel.com/80/40/cats/10/",
-        full: "http://lorempixel.com/80/040/cats/10/"
+        thumb: "http://lorempixel.com/80/60/cats/10/",
+        full: "http://lorempixel.com/800/600/cats/10/"
       },
       title: "CATZ R Gr8",
       caption: "LOLZ"
