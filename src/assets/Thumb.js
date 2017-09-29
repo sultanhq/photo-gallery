@@ -11,7 +11,8 @@ export class Thumb extends Component {
     const thumb = (
       <img
         key={image.id}
-        alt=""
+        alt={image.title}
+        title={image.title}
         src={image.url.thumb}
         onClick={this.imageSelected}
       />
