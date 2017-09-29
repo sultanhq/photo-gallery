@@ -1,23 +1,36 @@
 import React, { Component } from "react";
 import logo from "./logo.png";
 import "./App.css";
-import {ImageTitle} from "./assets/ImageTitle";
-import {NavButton} from "./assets/NavButton";
-import {ImageView} from "./assets/ImageView";
-import {ImageCaption} from "./assets/ImageCaption";
-import {ImageGallery} from "./assets/ImageGallery";
+import { ImageTitle } from "./assets/ImageTitle";
+import { NavButton } from "./assets/NavButton";
+import { ImageView } from "./assets/ImageView";
+import { ImageCaption } from "./assets/ImageCaption";
+import { ImageGallery } from "./assets/ImageGallery";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       img: {
-        title: "Image title",
-        url: "url",
-        caption: "caption"
-      },
+        title: "",
+        url: {
+          thumb: "",
+          full: ""
+        },
+        caption: ""
+      }
     };
   }
+
+  updateView = selectedImage => {
+    this.setState({
+      img: selectedImage
+    });
+  };
+
+  navigate = d =>{ // TO ADD
+  }
+
   render() {
     return (
       <div className="App">
@@ -27,12 +40,13 @@ class App extends Component {
         </div>
         <div className="Gallery">
           <ImageTitle text={this.state.img.title} />
-          <NavButton direction="Previous" />
-            <ImageView url={this.state.img.url} />
-          <NavButton direction="Next" />
+          <div className="viewContainer">
+            <NavButton direction="Previous" />
+            <ImageView url={this.state.img.url.full} />
+            <NavButton direction="Next" />
+          </div>
           <ImageCaption text={this.state.img.caption} />
-          <ImageGallery />
-
+          <ImageGallery updateView={this.updateView} />
         </div>
       </div>
     );
