@@ -28,15 +28,12 @@
   }
 }
 
-.Gallery {
-  height: 40px;
-}
-
 .view_container {
   text-align: center;
 }
 .Image {
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   height: 600px;
   width: 800px;
 }
@@ -47,4 +44,49 @@
 
 .Button_Next {
   float: right;
+}
+
+.Button_Previous,
+.Button_Next {
+  background-color: #c0c0c0;
+  border: none;
+  margin: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.Title {
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  height: 58px;
+}
+
+.Caption {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 25px;
+  height: 29px;
+}
+
+.Gallery {
+  width: 100%;
+  height: 50px;
+  bottom: 5px;
+  z-index: 10;
+}
+
+.Thumb {
+  float: left;
+  padding: 5px;
+}
+.Thumb:active {
+  border: 1px solid #d4d4d4;
+  background-color: red;
+  float: left;
+  padding: 5px;
 }

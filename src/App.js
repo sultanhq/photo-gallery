@@ -64,7 +64,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Image Gallery</h2>
         </div>
-        <div className="Gallery">
+        <div className="Image-Gallery">
           <ImageTitle text={this.state.img.title} />
           <div className="viewContainer">
             <NavButton direction="Previous" navigate={this.navigate} />
