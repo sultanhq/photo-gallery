@@ -34,7 +34,7 @@ class App extends Component {
     switch (direction) {
       case "Previous": {
         const images = getData();
-        let nextId = this.state.img.id - 2;
+        let nextId = this.state.img.id - 1;
         nextId < 0 ? (nextId = images.length - 1) : nextId;
         let nextImage = images[nextId];
         this.setState({
@@ -44,7 +44,7 @@ class App extends Component {
       }
       case "Next": {
         const images = getData();
-        let nextId = this.state.img.id;
+        let nextId = this.state.img.id + 1;
         nextId >= images.length ? (nextId = 0) : nextId;
         let nextImage = images[nextId];
         this.setState({
