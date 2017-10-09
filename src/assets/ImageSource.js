@@ -1,98 +1,98 @@
 const getData = () => {
-  let images = [
+  let localImages = [
     {
       id: 0,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/1/",
-        full: "http://lorempixel.com/800/600/cats/1/"
+        thumb: './images/thumbs/1.jpeg',
+        full: './images/full/1.jpeg',
       },
-      title: "NyanCat",
-      caption: "Mewment"
+      title: 'NyanCat',
+      caption: 'Mewment',
     },
     {
       id: 1,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/2/",
-        full: "http://lorempixel.com/800/600/cats/2/"
+        thumb: './images/thumbs/2.jpeg',
+        full: './images/full/2.jpeg',
       },
-      title: "Pussy Galore",
-      caption: "Cat-titude"
+      title: 'Pussy Galore',
+      caption: 'Cat-titude',
     },
     {
       id: 2,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/3/",
-        full: "http://lorempixel.com/800/600/cats/3/"
+        thumb: './images/thumbs/3.jpeg',
+        full: './images/full/3.jpeg',
       },
-      title: "Tiger",
-      caption: "Meow-sician"
+      title: 'Tiger',
+      caption: 'Meow-sician',
     },
     {
       id: 3,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/4/",
-        full: "http://lorempixel.com/800/600/cats/4/"
+        thumb: './images/thumbs/4.jpeg',
+        full: './images/full/4.jpeg',
       },
-      title: "Coco",
-      caption: "Claw-some"
+      title: 'Coco',
+      caption: 'Claw-some',
     },
     {
       id: 4,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/5/",
-        full: "http://lorempixel.com/800/600/cats/5/"
+        thumb: './images/thumbs/5.jpeg',
+        full: './images/full/5.jpeg',
       },
-      title: "Tigger",
-      caption: "Paw-lease"
+      title: 'Tigger',
+      caption: 'Paw-lease',
     },
     {
       id: 5,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/6/",
-        full: "http://lorempixel.com/800/600/cats/6/"
+        thumb: './images/thumbs/6.jpeg',
+        full: './images/full/6.jpeg',
       },
-      title: "Felix",
-      caption: "Meow-nificent"
+      title: 'Felix',
+      caption: 'Meow-nificent',
     },
     {
       id: 6,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/7/",
-        full: "http://lorempixel.com/800/600/cats/7/"
+        thumb: './images/thumbs/7.jpeg',
+        full: './images/full/7.jpeg',
       },
-      title: "Whiskers",
-      caption: "Cathletic"
+      title: 'Whiskers',
+      caption: 'Cathletic',
     },
     {
       id: 7,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/8/",
-        full: "http://lorempixel.com/800/600/cats/8/"
+        thumb: './images/thumbs/8.jpeg',
+        full: './images/full/8.jpeg',
       },
-      title: "Fluffy",
-      caption: "Purr-suasion"
+      title: 'Fluffy',
+      caption: 'Purr-suasion',
     },
     {
       id: 8,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/9/",
-        full: "http://lorempixel.com/800/600/cats/9/"
+        thumb: './images/thumbs/9.jpeg',
+        full: './images/full/9.jpeg',
       },
-      title: "Simba",
-      caption: "Paw-sitive"
+      title: 'Simba',
+      caption: 'Paw-sitive',
     },
     {
       id: 9,
       url: {
-        thumb: "http://lorempixel.com/80/60/cats/10/",
-        full: "http://lorempixel.com/800/600/cats/10/"
+        thumb: '/images/thumbs/10.jpeg',
+        full: '/images/full/10.jpeg',
       },
-      title: "Kitty",
-      caption: "LOLZ"
-    }
+      title: 'Kitty',
+      caption: 'LOLZ',
+    },
   ];
 
-  return images;
+  return localImages;
 };
 
 export { getData };
