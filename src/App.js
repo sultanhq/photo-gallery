@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import logo from "./logo.png";
-import "./App.css";
-import { ImageTitle } from "./assets/ImageTitle";
-import { NavButton } from "./assets/NavButton";
-import { ImageView } from "./assets/ImageView";
-import { ImageCaption } from "./assets/ImageCaption";
-import { ImageGallery } from "./assets/ImageGallery";
-import { getData } from "./assets/ImageSource";
+import React, { Component } from 'react';
+import logo from './logo.png';
+import './App.css';
+import { ImageTitle } from './assets/ImageTitle';
+import { NavButton } from './assets/NavButton';
+import { ImageView } from './assets/ImageView';
+import { ImageCaption } from './assets/ImageCaption';
+import { ImageGallery } from './assets/ImageGallery';
+import { getData } from './assets/ImageSource';
 
 class App extends Component {
   constructor() {
@@ -14,48 +14,83 @@ class App extends Component {
     this.state = {
       img: {
         id: 0,
-        title: "",
+        title: 'No Images Uploaded',
         url: {
-          thumb: "",
-          full: ""
+          thumb: '',
+          full: '',
         },
-        caption: ""
-      }
+        caption: 'Sad cat face',
+      },
     };
   }
 
   updateView = selectedImage => {
     this.setState({
-      img: selectedImage
+      img: selectedImage,
     });
   };
 
   navigate = direction => {
-    switch (direction) {
-      case "Previous": {
-        const images = getData();
-        let nextId = this.state.img.id - 1;
-        nextId < 0 ? (nextId = images.length - 1) : nextId;
-        let nextImage = images[nextId];
-        this.setState({
-          img: nextImage
-        });
+    const images = getData();
+
+    if (images.length > 0) {
+      let nextId;
+
+      switch (direction) {
+        case 'Previous': {
+          nextId = this.state.img.id - 1;
+          nextId < 0 ? (nextId = images.length - 1) : nextId;
+          break;
+        }
+        case 'Next': {
+          nextId = this.state.img.id + 1;
+          nextId >= images.length ? (nextId = 0) : nextId;
+          break;
+        }
+        default:
+          break;
+      }
+
+      this.setState({
+        img: images[nextId],
+      });
+    }
+  };
+
+  _handleKeyDown = event => {
+    switch (event.key) {
+      case 'ArrowRight': {
+        this.navigate('Next');
         break;
       }
-      case "Next": {
-        const images = getData();
-        let nextId = this.state.img.id + 1;
-        nextId >= images.length ? (nextId = 0) : nextId;
-        let nextImage = images[nextId];
-        this.setState({
-          img: nextImage
-        });
+      case 'ArrowLeft': {
+        this.navigate('Previous');
         break;
       }
       default:
         break;
     }
   };
+
+  componentWillMount() {
+    document.addEventListener('keydown', this._handleKeyDown.bind(this));
+  }
+  componentDidMount() {
+    const images = getData();
+    if (images.length > 0) {
+      this.setState({
+        img: this.getRandomImage(images),
+      });
+    }
+  }
+
+  getRandomImage(images) {
+    return images[Math.floor(Math.random() * images.length)];
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this._handleKeyDown.bind(this));
+  }
 
   render() {
     return (
