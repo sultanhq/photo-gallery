@@ -51,9 +51,7 @@ class App extends Component {
           break;
       }
 
-      this.setState({
-        img: images[nextId],
-      });
+      this.updateView(images[nextId]);
     }
   };
 
