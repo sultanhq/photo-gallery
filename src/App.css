@@ -38,16 +38,16 @@
   width: 800px;
 }
 
-.Button_Previous {
+.Previous {
   float: left;
 }
 
-.Button_Next {
+.Next {
   float: right;
 }
 
-.Button_Previous,
-.Button_Next {
+.Previous,
+.Next {
   background-color: #c0c0c0;
   border: none;
   margin: 5px;

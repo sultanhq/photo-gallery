@@ -73,6 +73,7 @@ class App extends Component {
   componentWillMount() {
     document.addEventListener('keydown', this._handleKeyDown.bind(this));
   }
+
   componentDidMount() {
     const images = getData();
     if (images.length > 0) {
