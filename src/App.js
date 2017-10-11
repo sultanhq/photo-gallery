@@ -77,9 +77,7 @@ class App extends Component {
   componentDidMount() {
     const images = getData();
     if (images.length > 0) {
-      this.setState({
-        img: this.getRandomImage(images),
-      });
+      this.updateView(this.getRandomImage(images));
     }
   }
 
